@@ -1,7 +1,11 @@
 # Enterprise Agentic GraphRAG
 
-An enterprise-focused GraphRAG system built with **Python, Neo4j, OpenAI, and the Neo4j GraphRAG Python package**.
+![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
+![Neo4j](https://img.shields.io/badge/Neo4j-GraphRAG-blue?logo=neo4j)
+![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4.1--mini-black?logo=openai)
+![GraphRAG](https://img.shields.io/badge/Architecture-GraphRAG-purple)
 
+An enterprise-focused GraphRAG system built with **Python, Neo4j, OpenAI, and the Neo4j GraphRAG Python package**.
 The system combines **semantic vector retrieval** with **knowledge graph traversal** to retrieve richer, relationship-aware context before generating answers with an LLM.
 
 ---
