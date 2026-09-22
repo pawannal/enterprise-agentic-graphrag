@@ -16,7 +16,7 @@ The system combines **semantic vector retrieval** with **knowledge graph travers
 - [Overview](#overview)
 - [Problem Statement](#problem-statement)
 - [Why GraphRAG](#why-graphrag)
-- [Architecture](#architecture)
+- [Architecture](#!Enterprise GraphRAG System Architecture](docs/architecture/graphrag-system-architecture.png)
 - [End-to-End Flow](#end-to-end-flow)
 - [Knowledge Graph](#knowledge-graph)
 - [Data Ingestion Pipeline](#data-ingestion-pipeline)
