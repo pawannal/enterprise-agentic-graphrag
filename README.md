@@ -103,6 +103,9 @@ Project Orion
     ↓
   Python
 
+Add your Architecture section:
+
+```markdown
 # Architecture
 
 ![Enterprise GraphRAG System Architecture](docs/architecture/graphrag-system-architecture.png)
@@ -112,9 +115,3 @@ The system is organized into three major stages:
 1. Data ingestion and knowledge graph construction
 2. Vector + graph retrieval
 3. LLM-based answer generation
-
-Project Sentinel
-    |
-    | USES
-    ↓
-  Python
