@@ -5,8 +5,9 @@
 ![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4.1--mini-black?logo=openai)
 ![GraphRAG](https://img.shields.io/badge/Architecture-GraphRAG-purple)
 
-An enterprise-focused GraphRAG system built with **Python, Neo4j, OpenAI, and the Neo4j GraphRAG Python package**.
-The system combines **semantic vector retrieval** with **knowledge graph traversal** to retrieve richer, relationship-aware context before generating answers with an LLM.
+An enterprise-focused **Graph Retrieval-Augmented Generation (GraphRAG)** system built with **Python, Neo4j, OpenAI, and the Neo4j GraphRAG Python package**.
+
+The system combines **semantic vector retrieval** with **knowledge graph traversal** to retrieve relationship-aware context before generating answers with an LLM.
 
 ---
 
@@ -27,9 +28,12 @@ The system combines **semantic vector retrieval** with **knowledge graph travers
 - [Project Results](#project-results)
 - [Technology Stack](#technology-stack)
 - [Project Structure](#project-structure)
+- [Prerequisites](#prerequisites)
 - [Setup](#setup)
 - [Environment Variables](#environment-variables)
 - [Running the Pipeline](#running-the-pipeline)
+- [Security](#security)
+- [Troubleshooting](#troubleshooting)
 - [Design Decisions](#design-decisions)
 - [Limitations](#limitations)
 - [Future Enhancements](#future-enhancements)
@@ -54,16 +58,16 @@ A typical enterprise environment contains:
 - Decisions
 - Relationships between these entities
 
-Traditional vector RAG is effective at finding semantically similar text, but it does not naturally represent or traverse relationships between entities.
+Traditional vector RAG is effective at finding semantically similar text. However, questions involving multiple entities and their relationships can benefit from structured graph context in addition to semantic similarity.
 
-This project addresses that limitation by combining:
+This project addresses that requirement by combining:
 
-1. **Document-based retrieval**
+1. **Document ingestion and chunking**
 2. **Vector embeddings**
 3. **Knowledge graph construction**
 4. **Entity and relationship extraction**
 5. **Entity resolution**
-6. **Graph-aware retrieval**
+6. **Vector + graph retrieval**
 7. **LLM-based answer generation**
 
 The result is an end-to-end **Graph Retrieval-Augmented Generation (GraphRAG)** pipeline.
@@ -76,9 +80,9 @@ Consider the question:
 
 > Which projects use Python and what do they use it for?
 
-A traditional vector search system may retrieve documents mentioning Python.
+A vector retrieval system can identify chunks that are semantically related to Python.
 
-However, an enterprise knowledge graph can explicitly represent:
+However, the enterprise knowledge graph can explicitly represent relationships such as:
 
 ```text
 Project Atlas
