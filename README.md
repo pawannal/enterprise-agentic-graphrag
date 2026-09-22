@@ -16,7 +16,7 @@ The system combines **semantic vector retrieval** with **knowledge graph travers
 - [Overview](#overview)
 - [Problem Statement](#problem-statement)
 - [Why GraphRAG](#why-graphrag)
-- [Architecture](#!Enterprise GraphRAG System Architecture](docs/architecture/graphrag-system-architecture.png)
+- [Architecture](#architecture)
 - [End-to-End Flow](#end-to-end-flow)
 - [Knowledge Graph](#knowledge-graph)
 - [Data Ingestion Pipeline](#data-ingestion-pipeline)
@@ -102,6 +102,16 @@ Project Orion
     | USES
     ↓
   Python
+
+# Architecture
+
+![Enterprise GraphRAG System Architecture](docs/architecture/graphrag-system-architecture.png)
+
+The system is organized into three major stages:
+
+1. Data ingestion and knowledge graph construction
+2. Vector + graph retrieval
+3. LLM-based answer generation
 
 Project Sentinel
     |
